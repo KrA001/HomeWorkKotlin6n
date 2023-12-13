@@ -8,14 +8,15 @@ import androidx.fragment.app.Fragment
 import com.example.homeworkkotlin6n.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
-    private lateinit var binding: FragmentFirstBinding
+    private var _binding: FragmentFirstBinding? = null
+    private val binding: FragmentFirstBinding get() = _binding!!
     private var count = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
     }
 

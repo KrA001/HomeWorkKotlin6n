@@ -8,14 +8,15 @@ import androidx.fragment.app.Fragment
 import com.example.homeworkkotlin6n.databinding.FragmentLastBinding
 
 class LastFragment : Fragment() {
-    private lateinit var binding: FragmentLastBinding
+    private var _binding: FragmentLastBinding? = null
+    private val binding: FragmentLastBinding get() = _binding!!
     private val animalsLisiAdapter = AnimalsListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentLastBinding.inflate(inflater, container, false)
+        _binding = FragmentLastBinding.inflate(inflater, container, false)
         return binding.root
     }
 

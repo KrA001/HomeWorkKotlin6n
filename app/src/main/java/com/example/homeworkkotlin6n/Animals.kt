@@ -1,7 +1,9 @@
 package com.example.homeworkkotlin6n
 
+import androidx.annotation.DrawableRes
+
 data class Animals(
-    val animalImage: Int, //Картинка
+    @DrawableRes val animalImage: Int, //Картинка
     val name: String, //Имя
     val claws: String, //Когти
     val beak: String //Клюв
